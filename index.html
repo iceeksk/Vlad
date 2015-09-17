@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script type="text/javascript" src="script/vendor/jquery-2.1.1.js"></script>
+    <script type="text/javascript" src="script/vendor/underscore-min.js"></script>
+    <script type="text/javascript" src="script/vendor/knockout-3.2.0.js"></script>
+    <script type="text/javascript" src="script/app/script.js"></script>
+</head>
+<body>
+<div data-bind="text:basketValue"></div>
+
+
+<!--ko if:firstPageVisibility-->
+<h1>Shopping cart - make purchases now!</h1>
+<section data-bind="foreach:categories">
+    <div class="categoryContainer" data-bind="click:$root.goToCategoryPage" >
+        <img data-bind="attr:{src:img}">
+        <div data-bind="text:category"></div>
+    </div>
+
+
+</section>
+<!--/ko-->
+<!--ko ifnot:firstPageVisibility-->
+<button data-bind="click:backToIndex">Back</button>
+
+
+<h1 data-bind="text:activePage"></h1>
+<div data-bind="foreach:goodList">
+    <img data-bind="attr:{src:img}">
+    <div data-bind="text:name"></div>
+    <div data-bind="text:price"></div>
+    <div data-bind="text:amount"></div>
+    <button data-bind="click:minus">-</button>
+    <button data-bind="click:plus">+</button>
+</div>
+
+
+<!--/ko-->
+
+
+</body>
+</html>
