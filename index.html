@@ -12,25 +12,30 @@
     <script type="text/javascript" src="script/app/script.js"></script>
 </head>
 <body>
-<div data-bind="text:basketValue"></div>
-
 
 <!--ko if:firstPageVisibility-->
+
+<header>
 <h1>Shopping cart - make purchases now!</h1>
+<div>
+    <div></div>
+    <span data-bind="text:basketValue"></span>
+</div>
+</header>
+
 <section data-bind="foreach:categories">
     <div class="categoryContainer" data-bind="click:$root.goToCategoryPage" >
         <img data-bind="attr:{src:img}">
         <div data-bind="text:category"></div>
     </div>
-
-
 </section>
 <!--/ko-->
+
 <!--ko ifnot:firstPageVisibility-->
 <button data-bind="click:backToIndex">Back</button>
-
-
 <h1 data-bind="text:activePage"></h1>
+<div data-bind="text:basketValue"></div>
+
 <div data-bind="foreach:goodList">
     <img data-bind="attr:{src:img}">
     <div data-bind="text:name"></div>
