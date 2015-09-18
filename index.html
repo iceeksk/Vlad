@@ -3,18 +3,16 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
-    <link href="css/style.css" type="text/css" rel="stylesheet">
-    <script type="text/javascript" src="script/vendor/jquery-2.1.1.js"></script>
-    <script type="text/javascript" src="script/vendor/underscore-min.js"></script>
-    <script type="text/javascript" src="script/vendor/knockout-3.2.0.js"></script>
-    <script type="text/javascript" src="script/app/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/fonts.css">
+    <link rel="stylesheet" type="text/css"  href="css/style.css">
+
 </head>
 <body>
     <!--ko if:firstPageVisibility-->
     <header>
-        <h1>Shopping cart - make purchases now!</h1>
-        <div>
-            <div></div>
+        <h1>Shopping Cart — Make Purchases Now!</h1>
+        <div class="shopping-cart">
+            <div class="cart-picture"></div>
             <span data-bind="text:basketValue"></span>
         </div>
     </header>
@@ -50,5 +48,9 @@
         </div>
     </section>
     <!--/ko-->
+    <script type="text/javascript" src="script/vendor/jquery-2.1.1.js"></script>
+    <script type="text/javascript" src="script/vendor/underscore-min.js"></script>
+    <script type="text/javascript" src="script/vendor/knockout-3.2.0.js"></script>
+    <script type="text/javascript" src="script/app/script.js"></script>
 </body>
 </html>
