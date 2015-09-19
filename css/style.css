@@ -3,8 +3,6 @@
     padding: 0;
 }
 body{
-    margin: 0 auto;
-    padding: 0;
     width: 1356px;
     height: 758px;
     border: solid 5px ;
@@ -13,11 +11,16 @@ body{
     overflow: hidden;
     font-family: SegoeUIRegular;
 }
-header{
-    height: 130px;
+header,
+.img-caption,
+.shopping-cart,
+.wrap-buttons{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+header{
+    height: 130px;
     margin-left: 115px;
 }
 h1{
@@ -28,10 +31,7 @@ h1{
     width: 280px;
     height: 60px;
     margin-right: 40px;
-    display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
     background-color: #d9644a;
 }
 .cart-picture{
@@ -59,27 +59,27 @@ section {
     height: 180px;
     margin: 0 10px 10px 0;
 }
-.categoryContainer:hover{
+.categoryContainer:hover,
+section figure:hover{
     box-shadow: 0 0 0 2px #bf613f;
 }
-/*big*/
 .categoryContainer:nth-child(9n),
-.categoryContainer:nth-child(9n+1){
+.categoryContainer:nth-child(9n+1),
+section figure{
     width: 360px;
     height: 370px;
 }
-/*wide*/
 .categoryContainer:nth-child(9n+2),
 .categoryContainer:nth-child(9n+8){
     width: 360px;
     height: 180px;
 }
-/*high*/
 .categoryContainer:nth-child(9n+7){
     width: 230px;
     height: 370px;
 }
-figcaption {
+figcaption,
+.img-caption{
     position: absolute;
     bottom: 0;
     box-sizing: border-box;
@@ -88,8 +88,6 @@ figcaption {
     width: 100%;
     background-color: rgba(255, 255, 255, 0.8);
 }
-/* ---------------------*/
-
 header button {
     top: 51px;
     left: 29px;
@@ -99,4 +97,45 @@ header button {
     border: solid 2px black;
     border-radius: 50%;
     background: url("../images/button.png") 50% 50% no-repeat;
+}
+section figure{
+    position: relative;
+    margin: 0 10px 10px 0;
+}
+.img-caption{
+    flex-flow: row wrap;
+    padding: 0 20px;
+}
+.color{
+    color: #d9644a;
+    font-size: 22px;
+    font-weight: 600;
+}
+.wrap-buttons{
+    height: 80px;
+    width: 360px;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    background-color: #4ea686;
+    margin-top: 10px;
+}
+.wrap-buttons button{
+    height: 31px;
+    width: 31px;
+    border: solid 2px #ffffff;
+    background-color: transparent;
+    font-size: 24px;
+    color: #ffffff;
+    cursor: pointer;
+}
+.wrap-buttons div {
+    height: 60px;
+    color: white;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.wrap-buttons span:last-child{
+    font-size: 24px;
 }

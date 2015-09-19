@@ -36,12 +36,12 @@
     <section data-bind="foreach:goodList">
         <figure>
             <img data-bind="attr:{src:img}">
-            <div>
+            <div class="img-caption">
                 <span data-bind="text:name"></span>
-                <span data-bind="text:price"></span>
+                <span class="color" data-bind="text:price"></span>
             </div>
         </figure>
-        <div>
+        <div class="wrap-buttons">
             <button data-bind="click:minus">-</button>
             <div>
                 <span>amount</span>
