@@ -25,7 +25,7 @@ function ViewModel() {
             })
 
         });
-        return value
+        return "$" + value
     });
 
     that.goToCategoryPage = function () {
