@@ -7,10 +7,6 @@ $(document).ready(function () {
     ko.applyBindings(viewModel);
 });
 
-$(function () {
-    $('.content-wrapper').jScrollPane();
-});
-
 function ViewModel() {
     var that = this;
     that.firstPageVisibility = ko.observable(true);
