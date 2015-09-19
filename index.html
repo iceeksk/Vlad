@@ -26,9 +26,12 @@
     <!--/ko-->
     <!--ko ifnot:firstPageVisibility-->
     <header>
-        <button data-bind="click:backToIndex">Back</button>
+        <button data-bind="click:backToIndex"></button>
         <h1 data-bind="text:activePage"></h1>
-        <div data-bind="text:basketValue"></div>
+        <div class="shopping-cart">
+            <div class="cart-picture"></div>
+            <span data-bind="text:basketValue"></span>
+        </div>
     </header>
     <section data-bind="foreach:goodList">
         <figure>
