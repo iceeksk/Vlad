@@ -8,7 +8,6 @@ body{
     border: solid 5px ;
     -webkit-border-image: url("../images/border.png")5 stretch;
     border-image: url("../images/border.png") 5 stretch;
-    overflow: hidden;
     font-family: SegoeUIRegular;
 }
 header,
@@ -46,22 +45,22 @@ h1{
     font-size: 24px;
 }
 section {
-    width: 1316px;
-    height: 630px;
+    width: 1270px;
+    height: 600px;
     display: flex;
     flex-flow: column wrap;
     align-content: flex-start;
     margin-left: 115px;
+    overflow: scroll;
 }
 .categoryContainer {
     position: relative;
     width: 230px;
     height: 180px;
-    margin: 0 10px 10px 0;
 }
 .categoryContainer:hover,
 section figure:hover{
-    box-shadow: 0 0 0 2px #bf613f;
+    outline: solid 2px #d9644a;
 }
 .categoryContainer:nth-child(9n),
 .categoryContainer:nth-child(9n+1),
@@ -100,7 +99,7 @@ header button {
 }
 section figure{
     position: relative;
-    margin: 0 10px 10px 0;
+    margin: 5px;
 }
 .img-caption{
     flex-flow: row wrap;

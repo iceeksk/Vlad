@@ -53,7 +53,7 @@ function ViewModel() {
                     }
                 }
             })
-        });console.log(data)
+        });
         that.categories(data);
     }
 }
